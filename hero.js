@@ -8,6 +8,10 @@ Hero.prototype = {
   eats: function(eatenfood){
     console.log(eatenfood);
     console.log(this.food);
+    if (eatenfood.poison){
+      this.health -= 20;
+      return this.health
+    }
     if (eatenfood.name === this.food){
       this.health += (1.5* eatenfood.value);
     }

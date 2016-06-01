@@ -1,16 +1,15 @@
 var assert = require('chai').assert;
-// var assert = require('mocha');
-
 var Hero = require('../hero');
+var Food = require('../food');
 
 
 
  describe('Hero', function() {
 
-  //  beforeEach(function(){
-  //    var hero1 = new Hero("HiroProtagonist",22,"pizza");
-   //
-  //  });
+//   beforeEach(function(){
+//     var hero1 = new Hero("HiroProtagonist",22,"pizza");
+//
+// });
   it('it should have a name', function () {
       var hero1 = new Hero("HiroProtagonist",22,"pizza")
      assert.equal("HiroProtagonist", hero1.name);
@@ -31,6 +30,13 @@ var Hero = require('../hero');
 
     var hero1 = new Hero("HiroProtagonist",22,"pizza")
   assert.equal("HiroProtagonist", hero1.talk())
+  })
+
+  it('should be able to eat food', function(){
+    var hero1 = new Hero("HiroProtagonist",22,"pizza")
+    var food1 = new Food("pizza",22)
+
+    assert.equal(44,hero1.eats(food1))
   })
 })
 

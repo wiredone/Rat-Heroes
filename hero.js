@@ -5,8 +5,13 @@ var Hero = function(name, health, food){
 };
 
 Hero.prototype = {
-  eat: function(){
-    // this.eat = this.weight + 10;
+  eats: function(eatenfood){
+    if (eatenfood === this.food){
+      this.health += (1.5* eatenfood.value);
+    }
+    else{
+    this.health += eatenfood.value};
+    return this.health
   },
   talk: function(){
 return this.name

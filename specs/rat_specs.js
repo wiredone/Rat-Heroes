@@ -10,8 +10,9 @@ var Food = require('../food');
 
    beforeEach(function(){
       rat1 = new Rat("Socrates","defile");
-      food1 = new Food("pizza",22)
-      food2 = new Food("fish",22)
+      rat2 = new Rat("Rat King","poison");
+      food3 = new Food("pizza",22)
+      food4 = new Food("fish",22)
    });
 
   it('it should have a name', function () {
@@ -21,8 +22,12 @@ var Food = require('../food');
      assert.equal("defile", rat1.power);
   })
   it('it should be able to defile food', function () {
-    rat1.touch(food1)
-     assert.equal(11, food1.value);
+    rat1.touch(food3)
+     assert.equal(11, food3.value);
+  })
+  it('it should be not be able to defile food unless it has the power of defile', function () {
+    rat2.touch(food3)
+     assert.equal(22, food4.value);
   })
 
 })

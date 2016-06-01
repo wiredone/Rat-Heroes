@@ -1,6 +1,7 @@
 var Food = function(name, value){
   this.name = name;
   this.value = value;
+  this.poison = false;
 };
 
 Food.prototype = {
@@ -8,7 +9,9 @@ Food.prototype = {
     console.log(this.value);
      this.value = (this.value * 0.5);
      return this.value
-
+  },
+  poisoned: function(){
+    this.poison = true;
   }
 }
 

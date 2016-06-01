@@ -5,7 +5,11 @@ var Rat = function(name, power){
 
 Rat.prototype = {
   touch: function(food){
-     food.defiled()
+    if(this.power === "defile"){
+     food.defiled()}
+     else{
+     food.poisoned()
+     }
   }
 }
 

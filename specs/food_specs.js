@@ -23,10 +23,13 @@ var Food = require('../food');
 
   })
 
-  it('should be poisonable by a rat', function(){
-
+  it('should be defilable by a rat', function(){
+    //food1.defiled()
      assert.equal(11, food1.defiled());
-
+  })
+  it('should be poisonable by a rat', function(){
+    food1.poisoned()
+     assert.equal(true, food1.poison);
   })
 
 

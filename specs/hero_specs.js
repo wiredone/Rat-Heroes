@@ -8,9 +8,9 @@ var Food = require('../food');
  describe('Hero', function() {
 
    beforeEach(function(){
-     var hero1 = new Hero("HiroProtagonist",22,"pizza");
-     var food1 = new Food("pizza",22)
-
+      hero1 = new Hero("HiroProtagonist",22,"pizza");
+      food1 = new Food("pizza",22)
+      food2 = new Food("fish",22)
    });
 
   it('it should have a name', function () {
@@ -39,7 +39,7 @@ var Food = require('../food');
     // var hero1 = new Hero("HiroProtagonist",22,"pizza")
     // var food2 = new Food("fish",22)
 
-    assert.equal(22,hero1.eats(food2))
+    assert.equal(44,hero1.eats(food2))
   })
   it('should have their health should go up by 1.5 * value, If the food is their favourite food.', function(){
     // var hero1 = new Hero("HiroProtagonist",22,"pizza")

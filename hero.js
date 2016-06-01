@@ -6,7 +6,9 @@ var Hero = function(name, health, food){
 
 Hero.prototype = {
   eats: function(eatenfood){
-    if (eatenfood === this.food){
+    console.log(eatenfood);
+    console.log(this.food);
+    if (eatenfood.name === this.food){
       this.health += (1.5* eatenfood.value);
     }
     else{

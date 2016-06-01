@@ -4,8 +4,11 @@ var Food = function(name, value){
 };
 
 Food.prototype = {
-  eaten: function(){
-    // this.eat = this.weight + 10;
+  defiled: function(){
+    console.log(this.value);
+     this.value = (this.value * 0.5);
+     return this.value
+
   }
 }
 

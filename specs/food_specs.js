@@ -9,19 +9,25 @@ var Food = require('../food');
 
  describe('Food', function() {
 
-  //  beforeEach(function(){
-  //    var hero1 = new Hero("HiroProtagonist",22,"pizza");
-   //
-  //  });
+   beforeEach(function(){
+     food1 = new Food("pizza",22)
+     food2 = new Food("fish",22)
+   });
+
   it('it should have a name', function () {
-      var food1 = new Food("pizza",22)
      assert.equal("pizza", food1.name);
   })
 
   it('should have a replenishment value', function(){
-    var food1 = new Food("pizza",22)
     assert.equal(22, food1.value);
 
+  })
+
+  it('should be poisonable by a rat', function(){
+
+     assert.equal(11, food1.defiled());
 
   })
+
+
 })
